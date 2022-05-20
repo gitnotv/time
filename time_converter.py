@@ -8,7 +8,7 @@ class timify():
         without_unit = query[:-1]
         raw_unit = query[-1:]
         if without_unit.isnumeric():
-            unit_dict = {"h" : 3600, "m" : 60, "d" : 3600 * 24, "w" : 3600 * 24 * 7, "m" : 3600 * 24 * 7 * 4, "y" : 3600 * 24 * 7 * 4 * 12}
+            unit_dict = {"s" : 1, "h" : 3600, "m" : 60, "d" : 3600 * 24, "w" : 3600 * 24 * 7, "m" : 3600 * 24 * 7 * 4, "y" : 3600 * 24 * 7 * 4 * 12}
             try:
                 converter = unit_dict[raw_unit]
             except KeyError:
