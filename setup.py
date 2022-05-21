@@ -1,6 +1,6 @@
 
 from setuptools import find_packages, setup, Command
-
+import io
 # Package meta-data.
 NAME = 'mypackage'
 DESCRIPTION = 'My short description for my project.'
