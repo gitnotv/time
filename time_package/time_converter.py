@@ -1,5 +1,5 @@
 class timify():
-    """[_convert : converts your time in s|m|h|d|w|m|y to seconds then returns the result]"""
+    """[_convert : converts your time in s|m|h|d|w|y to seconds then returns the result]"""
 
     def _convert(self, query : str):
         if query.isnumeric():
@@ -10,7 +10,7 @@ class timify():
             if without_unit.isnumeric():
                 unit_dict = {"s" : 1, "h" : 3600, "m" : 60, "d" : 3600 * 24, "w" : 3600 * 24 * 7, "y" : 3600 * 24 * 7 * 4 * 12}
                 try:
-                    converter = unit_dict[raw_unit]
+                    converter = unit_dict[raw_unit.lower()]
                 except KeyError:
                     raise KeyError("Recieved invalid time format.")
                 else:
